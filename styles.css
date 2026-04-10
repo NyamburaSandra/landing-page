@@ -5,6 +5,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #f8f9fc;
     color: #333;
@@ -27,6 +31,9 @@ a {
     background: #fff;
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-inner {
@@ -81,7 +88,12 @@ a {
     color: #555;
 }
 
-.nav a:hover {
+.nav a {
+    transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
     color: #2b6bf3;
 }
 
